@@ -1,0 +1,916 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  font-family: Urbanist, system-ui, Avenir, Arial, Helvetica, sans-serif;
+  background-color:transparent;
+  color: #fff;
+}
+
+html {
+  font-size: 65%;
+}
+
+:root {
+  --bg-color: #f4f3ff;
+  --primary-color:blue; /* Primary color */
+  --dark-color: #242424;
+  --helper-color: #99b9ff;
+}
+
+.container {
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 4rem 2.4rem;
+}
+
+a {
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  color: var(--primary-color);
+  text-decoration: inherit;
+}
+
+p,
+li,
+label,
+input,
+textarea {
+  font-size: 1.6rem;
+  line-height: 1.56rem;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.06rem;
+}
+
+.grid {
+  display: grid;
+  gap: 6.4rem;
+}
+
+.grid-two-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-four-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Module Rules / Reusable */
+button {
+  text-transform: capitalize;
+  padding: 1rem 2.2rem;
+  font-size: 1.7rem;
+  font-weight: 500;
+  background-color: var(--primary-color);
+  border-radius: 0.8rem;
+  border: 0.1rem solid transparent;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+  transition: border-color 0.3s;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 0.2rem var(--primary-color);
+  margin-left: 3.2rem;
+}
+
+/* Hero Section */
+.section-hero {
+  .grid {
+    align-items: center;
+  }
+
+  .hero-content {
+    p {
+      margin: 2.4rem 0 4.8rem 0;
+      &:first-child {
+        margin: 0 0 1.2rem 0;
+      }
+    }
+  }
+
+  .hero-image {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 70%;
+      height: auto;
+    }
+  }
+}
+
+/* Analytics Section */
+.analytics-section {
+  background-color: var(--primary-color);
+  padding: 20px;
+  color: #fff;
+}
+
+.analytics-section h1 {
+  color: #fff;
+  background-color: var(--primary-color);
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  background-color: var(--primary-color);
+}
+
+.analytics-card {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.analytics-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+/* Contact Form */
+.section-contact {
+  background-color: #111;
+  padding: 4rem 0;
+  color: #eee;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .contact-content {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #fff;
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .contact-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .section-form {
+    background-color: #222;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      label {
+        font-weight: 600;
+        color: #ccc;
+        margin-bottom: 0.5rem;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid #444;
+        border-radius: 5px;
+        background-color: #333;
+        color: #ddd;
+        font-size: 1rem;
+        transition: border-color 0.3s ease, background-color 0.3s ease;
+
+        &:focus {
+          border-color: #007bff;
+          background-color: #444;
+          outline: none;
+        }
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      button {
+        padding: 1rem;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+  }
+
+  .mb-3 {
+    margin-bottom: 3rem;
+
+    iframe {
+      border: 0;
+      border-radius: 10px;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+/* Registration Page */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #000;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.section-registration {
+  background-color: #000;
+  padding: 40px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.registration-image {
+  text-align: center;
+}
+
+.registration-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 0 0 10px;
+}
+
+.registration-form {
+  padding: 20px;
+}
+
+.main-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-submit {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: #3e8e41;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .registration-image {
+    display: none;
+  }
+  .registration-form {
+    padding: 10px;
+  }
+}
+
+button:hover {
+  box-shadow: inset 0 0 0 0.2rem var(--bg-color);
+}
+
+a:hover,
+a.active {
+  color: #535bf2;
+}
+
+/* Pseudo Elements */
+.main-heading {
+  position: relative;
+  text-transform: capitalize;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: 0.5rem;
+    background-color: var(--primary-color);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover,
+  a.active {
+    color: #747bff;
+  }
+}
+
+/* Error Page */
+.error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  padding: 2rem;
+}
+
+.error-page h1 {
+  font-size: 5rem;
+  color: var(--primary-color);
+}
+
+.error-page p {
+  font-size: 1.8rem;
+  color: #666;
+}
+
+.error-page button {
+  padding: 1rem 2.2rem;
+  font-size: 1.7rem;
+  font-weight: 500;
+  background-color: var(--primary-color);
+  border-radius: 0.8rem;
+  border: 0.1rem solid transparent;
+  color: #fff;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.error-page button:hover {
+  background-color: #4353ff;
+}
+
+/* Toastify styling*/
+ .toastBody {
+  font-family: "Atlas Grotesk Web", Arial, Helvetica, sans-serif;
+  color: #fff; /* #10171D */
+  font-size: 1.75rem !important;
+}
+
+
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #1c1c1c;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Admin Users Section */
+
+.admin-users-section {
+  padding: 50px 0;
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 30px auto;
+  max-width: 90%;
+}
+
+.admin-users-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  color: #f8f9fa;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  color: #fff; /* Ensure text inside the table is white */
+}
+
+table thead {
+  background-color: #007bff;
+  color: #fff;
+}
+
+table thead th {
+  padding: 16px 20px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+table tbody tr {
+  border-bottom: 1px solid #444;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #333;
+}
+
+table tbody td {
+  padding: 16px 20px;
+  font-size: 18px;
+  color: #e0e0e0; /* Adjusted to ensure visibility */
+}
+
+/* Button Styles */
+.update-btn, .delete-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.update-btn {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.update-btn:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-users-section {
+      padding: 30px 15px;
+  }
+
+  table thead {
+      display: none;
+  }
+
+  table tbody, table tr, table td {
+      display: block;
+      width: 100%;
+  }
+
+  table tbody tr {
+      margin-bottom: 15px;
+      border-bottom: none;
+      background-color: #444;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+  }
+
+  table tbody td {
+      padding: 15px;
+      text-align: right;
+      font-size: 16px;
+      position: relative;
+  }
+
+  table tbody td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 50%;
+      padding-left: 20px;
+      font-weight: bold;
+      text-align: left;
+      color: #bbb;
+      text-transform: uppercase;
+  }
+
+  .update-btn, .delete-btn {
+      display: block;
+      width: 100%;
+      margin: 5px 0;
+      text-align: center;
+  }
+}
+
+
+
+
+
+/* Unvisited link */
+a {
+  color: #fff; /* Dark gray color for links */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Visited link */
+a:visited {
+  color: #fff; /* Slightly different color for visited links */
+}
+
+/* Hover state */
+a:hover {
+  color: #fff; /* Blue color on hover */
+  text-decoration: none; /* Underline on hover */
+}
+
+/* Active state (when the link is being clicked) */
+a:active {
+  color: #fff; /* Darker blue while clicking */
+}
+
+
+/* EditUserForm.css */
+
+.edit-user-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #333; /* Dark background for contrast */
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.edit-user-form h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #fff; /* White text color */
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.edit-user-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-user-form div {
+  margin-bottom: 20px;
+}
+
+.edit-user-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ddd; /* Light grey text color */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.edit-user-form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #555; /* Darker border color */
+  border-radius: 6px;
+  font-size: 16px;
+  color: #fff; /* White text color in input */
+  background-color: #444; /* Dark background for input */
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.edit-user-form input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+.edit-user-form button {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: #fff; /* White text color */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.edit-user-form button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.edit-user-form button:disabled {
+  background-color: #c0c0c0;
+  cursor: not-allowed;
+}
+
+.edit-user-form .error {
+  color: #dc3545;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*Scrollbar CSS*/
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #181818;
+}
+
+::-webkit-scrollbar-thumb {
+  background: -webkit-linear-gradient(blue, red);
+  border-radius: 10px;
+
+}
+
+.greet {
+  /* existing styles here */
+  background: -webkit-linear-gradient(360deg, blue, red,blue,red,blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 25px 0px;
+  font-size: 56px;
+  font-weight: 500;
+  padding: 20px;
+  transform: scale(1); /* scale up by 1.5 times */
+  white-space: nowrap; /*It makes the username in Homepage to be in single row*/
+}
+
+.verified-logo {
+  margin-left: 10px;
+  vertical-align: middle;
+  width: 30px;  /* Adjust the size as needed */
+  height: 30px; /* Adjust the size as needed */
+  margin-bottom: 8px;
+  
+}
+
+.logo-brand .nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size:1.1rem;
+  padding: 20px;
+  color:#0ef;
+  font-weight: 600;
+  
+ }
+
+ .logo-brand p{
+  font-size: 2rem;
+  font-weight: 600;
+  color:#0ef;
+  margin: 0;
+  padding: 0;
+  margin-left: 10px;
+  font-family: 'Poppins', sans-serif;
+  
+  
+
+ }
+ 
+ .logo-brand span{
+     display: flex;
+     margin-left: 55px;
+     font-size: .75rem;
+     color:#5f6368;
+     font-weight: 500;
+     font-size: 1rem;
+     padding-bottom:15px ;
+ }
+ 
+ .logo-brand img{
+    
+     width: 45px;
+     border-radius: 50%;
+     vertical-align: middle;
+ }
+
+ .btn .redirect-btn{
+  height: 60px;
+  padding: 16px;
+  background-color: #fff;
+  color: #111;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  bottom: 15px;
+  box-shadow: inset 0 0 0 0.2rem var(blue);
+
+  
+}
+
+.btn .redirect-btn:hover{
+  background-color: blue;
+  color: #fff;
+  box-shadow: 7px 7px #fff;
+}
+
+.admin-contacts-section {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #121212; /* Dark background */
+  border-radius: 10px; /* Rounded edges for a polished look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+.admin-contacts-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ffffff; /* White text for contrast */
+  font-size: 2rem;
+  position: relative;
+  font-family: 'Roboto', sans-serif; /* Modern font for better readability */
+}
+
+.admin-contacts-section h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #3498db; /* Accent blue */
+  margin: 0.5rem auto;
+  border-radius: 2px;
+}
+
+.admin-users {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.admin-users > div {
+  background: #1e1e1e; /* Slightly lighter dark background */
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 4px solid #3498db; /* Blue accent border */
+}
+
+.admin-users > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.admin-users p {
+  margin: 0.5rem 0;
+  color: #dcdcdc; /* Light gray text for readability */
+  line-height: 1.6;
+}
+
+.admin-users p:first-of-type {
+  font-weight: bold;
+  color: #ffffff; /* White for bold text */
+  font-size: 1.1rem;
+}
+
+.delete-btn {
+  background-color: #e74c3c; /* Red for delete button */
+  color: white; /* White text for contrast */
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b; /* Darker red on hover */
+  transform: scale(1.05); /* Slight scaling effect */
+}
+
+.delete-btn:focus {
+  outline: 2px solid #c0392b;
+  outline-offset: 2px;
+}
+
+/* Add a subtle badge for new items */
+.admin-users > div::before {
+  content: "NEW";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #3498db; /* Accent blue */
+  color: #ffffff; /* White text */
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  display: none;
+}
+
+.admin-users > div:hover::before {
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .admin-users {
+    grid-template-columns: 1fr;
+  }
+  
+  .admin-contacts-section {
+    padding: 1rem;
+  }
+}
+
+/* Loading state */
+.loading-contacts {
+  text-align: center;
+  padding: 2rem;
+  color: #7f8c8d; /* Muted text for loading message */
+  font-style: italic;
+}
+
+/* Empty state */
+.empty-contacts {
+  text-align: center;
+  padding: 2rem;
+  color: #7f8c8d; /* Muted text for empty message */
+  grid-column: 1 / -1;
+  font-style: italic;
+}

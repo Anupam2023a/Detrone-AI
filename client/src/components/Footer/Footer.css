@@ -1,0 +1,77 @@
+/* Footer Styles */
+footer {
+    padding: 4rem 2rem; /* Spacious padding for a luxury feel */
+    text-align: center;
+    background-color: #0d1117; /* Sleek dark background */
+    color: #c9d1d9; /* Light text for readability */
+    margin-top: auto;
+    border-top: 1px solid #30363d; /* Subtle divider for separation */
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem; /* Larger font size for better readability */
+    line-height: 1.8;
+  }
+  
+  /* Footer Title (Optional) */
+  footer .footer-title {
+    font-size: 2rem; /* Large title font */
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #ffffff; /* Bright white for emphasis */
+  }
+  
+  /* Footer Links */
+  footer a {
+    color: #58a6ff; /* Vibrant blue for links */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  
+    /* Hover Effect */
+    &:hover {
+      color: #1f6feb; /* Slightly darker blue on hover */
+    }
+  }
+  
+  /* Social Icons Section */
+  footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* Space between social icons */
+    margin-top: 2rem;
+  }
+  
+  footer .social-icons a {
+    display: inline-block;
+    color: #c9d1d9; /* Icon color */
+    font-size: 2rem; /* Larger icon size */
+    transition: transform 0.3s ease, color 0.3s ease;
+  
+    /* Hover Effect */
+    &:hover {
+      transform: scale(1.2); /* Slight zoom on hover */
+      color: #58a6ff; /* Blue tint on hover */
+    }
+  }
+  
+  /* Footer Bottom Text */
+  footer p {
+    font-size: 1.1rem; /* Larger font for footer text */
+    margin-top: 2rem;
+    color: #8b949e; /* Muted gray for subtle emphasis */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    footer {
+      padding: 3rem 1.5rem; /* Adjust padding for smaller screens */
+      font-size: 1rem; /* Slightly smaller font on mobile */
+    }
+  
+    footer .footer-title {
+      font-size: 1.8rem; /* Adjust title size for smaller screens */
+    }
+  
+    footer .social-icons a {
+      font-size: 1.8rem; /* Adjust icon size for smaller screens */
+    }
+  }
